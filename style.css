@@ -1,0 +1,15 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 50px;
+}
+
+#content {
+    margin-top: 20px;
+}
+
+.lesson, .quiz {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+}
