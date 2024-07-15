@@ -4,12 +4,41 @@ body {
     padding: 50px;
 }
 
-#content {
+#subjects {
+    display: flex;
+    justify-content: space-around;
     margin-top: 20px;
 }
 
-.lesson, .quiz {
-    border: 1px solid #ccc;
+.subject-button {
+    padding: 20px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+.math {
+    background-color: blue;
+}
+
+.english {
+    background-color: yellow;
+    color: black;
+}
+
+.science {
+    background-color: green;
+}
+
+#subject-content h2 {
+    margin-top: 20px;
+}
+
+.lesson-button {
+    display: block;
+    margin: 10px 0;
     padding: 10px;
-    margin-bottom: 20px;
+    font-size: 16px;
+    cursor: pointer;
 }

@@ -81,4 +81,37 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     loadModel(); // Initialize the model when the page loads
+    document.addEventListener('DOMContentLoaded', function() {
+        const homeDiv = document.getElementById('home');
+        const subjectContentDiv = document.getElementById('subject-content');
+    
+        const subjects = {
+            math: 'Math',
+            english: 'English',
+            science: 'Science'
+        };
+    
+        // Event listener for subject buttons
+        document.querySelectorAll('.subject-button').forEach(button => {
+            button.addEventListener('click', function() {
+                const subject = this.classList[1];
+                showSubject(subject);
+            });
+        });
+    
+        function showSubject(subject) {
+            homeDiv.style.display = 'none';
+            subjectContentDiv.style.display = 'block';
+            subjectContentDiv.innerHTML = `<h2>${subjects[subject]}</h2>`;
+            
+            for (let i = 1; i <= 20; i++) {
+                const lessonButton = document.createElement('button');
+                lessonButton.className = 'lesson-button';
+                lessonButton.textContent = `Lesson ${i}`;
+                lessonButton.onclick = () => alert(`${subjects[subject]} - Lesson ${i}`);
+                subjectContentDiv.appendChild(lessonButton);
+            }
+        }
+    })
+    
 });
